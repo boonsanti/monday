@@ -279,8 +279,8 @@ var formatTests = []FormatTest{
 	{LocaleZhTW, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006年1月2日 Monday", "2013年5月13日 星期一"},
 	{LocaleZhTW, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006年1月2日", "2013年5月13日"},
 	{LocaleZhTW, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006年 Jan 2日", "2013年 5 13日"},
-	{LocaleZhTW, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006年 January 2日", "2013年 5 月 13日"},
-	{LocaleZhTW, time.Date(0, 5, 1, 0, 0, 0, 0, time.UTC), "January", "5 月"},
+	{LocaleZhTW, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006年 January 2日", "2013年 五月 13日"},
+	{LocaleZhTW, time.Date(0, 5, 1, 0, 0, 0, 0, time.UTC), "January", "五月"},
 
 	{LocaleZhHK, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006-01-2", "2013-05-13"},
 	{LocaleZhHK, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006/1/2 Monday", "2013/5/13 星期一"},
@@ -334,6 +334,15 @@ var formatTests = []FormatTest{
 	{LocaleSlSI, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2 Jan 2006", "13 maj 2013"},
 	{LocaleSlSI, time.Date(0, 5, 1, 0, 0, 0, 0, time.UTC), "January", "maj"},
 	{LocaleSlSI, time.Date(0, 5, 13, 0, 0, 0, 0, time.UTC), "2 January", "13 maj"},
+
+	{LocaleThTH, time.Date(2013, 9, 3, 0, 0, 0, 0, time.UTC), "Mon Jan 2 2006", "อ ก.ย. 3 2013"},
+	{LocaleThTH, time.Date(2013, 9, 4, 0, 0, 0, 0, time.UTC), "2006/1/2 Monday", "2013/9/4 พุธ"},
+	{LocaleThTH, time.Date(2013, 10, 3, 0, 0, 0, 0, time.UTC), "Monday January 02 2006", "พฤหัสบดี ตุลาคม 03 2013"},
+	{LocaleThTH, time.Date(2013, 11, 3, 0, 0, 0, 0, time.UTC), "Monday. 2 January 2006", "อาทิตย์. 3 พฤศจิกายน 2013"},
+	{LocaleThTH, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2006. 2 January. Monday", "2013. 13 พฤษภาคม. จันทร์"},
+	{LocaleThTH, time.Date(2013, 5, 13, 0, 0, 0, 0, time.UTC), "2 Jan 2006", "13 พ.ค. 2013"},
+	{LocaleThTH, time.Date(0, 5, 1, 0, 0, 0, 0, time.UTC), "January", "พฤษภาคม"},
+	{LocaleThTH, time.Date(0, 5, 13, 0, 0, 0, 0, time.UTC), "2 January", "13 พฤษภาคม"},
 }
 
 func TestFormat(t *testing.T) {

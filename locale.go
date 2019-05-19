@@ -40,6 +40,7 @@ const (
 	LocaleFrRE = "fr_RE" // French (Reunion)
 	LocaleFrGF = "fr_GF" // French (French Guiana)
 	LocaleCsCZ = "cs_CZ" // Czech (Czech Republic)
+	LocaleSlSI = "sl_SI" // Slovenian (Slovenia)
 	LocaleThTH = "th_TH" // Thai (Thailand)
 )
 
@@ -80,6 +81,7 @@ func ListLocales() []Locale {
 		LocaleFrRE,
 		LocaleFrGF,
 		LocaleCsCZ,
+		LocaleSlSI,
 		LocaleThTH,
 	}
 }
